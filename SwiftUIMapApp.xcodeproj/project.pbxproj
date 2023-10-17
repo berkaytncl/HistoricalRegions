@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB146C432ADE7167000CE6C9 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146C422ADE7167000CE6C9 /* LocationsView.swift */; };
 		EB146C452ADE7589000CE6C9 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB146C442ADE7589000CE6C9 /* LocationsViewModel.swift */; };
+		EB29C8402ADEA2A90096D6A7 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29C83F2ADEA2A90096D6A7 /* LocationsListView.swift */; };
 		EBCEDBCC2ADE58ED00B5C443 /* SwiftUIMapAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCEDBCB2ADE58ED00B5C443 /* SwiftUIMapAppApp.swift */; };
 		EBCEDBD32ADE58EE00B5C443 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCEDBD22ADE58EE00B5C443 /* Preview Assets.xcassets */; };
 		EBCEDBDA2ADE5AAC00B5C443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCEDBD92ADE5AAC00B5C443 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		EB146C422ADE7167000CE6C9 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		EB146C442ADE7589000CE6C9 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		EB29C83F2ADEA2A90096D6A7 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		EBCEDBC82ADE58ED00B5C443 /* SwiftUIMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCEDBCB2ADE58ED00B5C443 /* SwiftUIMapAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapAppApp.swift; sourceTree = "<group>"; };
 		EBCEDBD22ADE58EE00B5C443 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				EB146C422ADE7167000CE6C9 /* LocationsView.swift */,
+				EB29C83F2ADEA2A90096D6A7 /* LocationsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				EBCEDBE22ADE5D0200B5C443 /* LocationsDataService.swift in Sources */,
 				EB146C432ADE7167000CE6C9 /* LocationsView.swift in Sources */,
 				EBCEDBDF2ADE5C1200B5C443 /* Location.swift in Sources */,
+				EB29C8402ADEA2A90096D6A7 /* LocationsListView.swift in Sources */,
 				EBCEDBCC2ADE58ED00B5C443 /* SwiftUIMapAppApp.swift in Sources */,
 				EB146C452ADE7589000CE6C9 /* LocationsViewModel.swift in Sources */,
 			);

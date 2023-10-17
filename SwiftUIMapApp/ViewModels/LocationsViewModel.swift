@@ -11,17 +11,21 @@ import MapKit
 class LocationsViewModel: ObservableObject {
     
     // All loaded locations
-    @Published var locations: [Location]
+    @Published private(set) var locations: [Location]
     
     // Current location on map
-    @Published var mapLocation: Location {
+    @Published private(set) var mapLocation: Location {
         didSet {
             updateCameraPosition(location: mapLocation)
         }
     }
     
+    // Current camera position on map
     @Published var cameraPosition: MapCameraPosition = MapCameraPosition.region(MKCoordinateRegion())
-    let mapSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    
+    // Show list of locations
+    @Published private(set) var showLocationsList: Bool = false
     
     init() {
         let locations = LocationsDataService.locations
@@ -33,10 +37,21 @@ class LocationsViewModel: ObservableObject {
     
     private func updateCameraPosition(location: Location) {
         withAnimation(.easeInOut) {
-            cameraPosition = MapCameraPosition.region(MKCoordinateRegion(
+            self.cameraPosition = MapCameraPosition.region(MKCoordinateRegion(
                 center: location.coordinates,
-                span: mapSpan
+                span: self.mapSpan
             ))
         }
+    }
+    
+    func toggleLocationsList() {
+        withAnimation(.easeInOut) {
+            showLocationsList.toggle()
+        }
+    }
+    
+    func changeMapLocation(location: Location) {
+        mapLocation = location
+        showLocationsList = false
     }
 }
