@@ -1,5 +1,5 @@
 //
-//  LocationPreviewView.swift
+//  LocationPreviewCardView.swift
 //  SwiftUIMapApp
 //
 //  Created by Berkay Tuncel on 17.10.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LocationPreviewView: View {
+struct LocationPreviewCardView: View {
     
     @EnvironmentObject private var viewModel: LocationsViewModel
     let location: Location
@@ -38,13 +38,13 @@ struct LocationPreviewView: View {
     ZStack {
         Color.blue.ignoresSafeArea()
         
-        LocationPreviewView(location: LocationsDataService.locations.first!)
+        LocationPreviewCardView(location: LocationsDataService.locations.first!)
             .padding()
     }
     .environmentObject(LocationsViewModel())
 }
 
-extension LocationPreviewView {
+extension LocationPreviewCardView {
     private var imageSection: some View {
         ZStack {
             if let imageName = location.imageNames.first {

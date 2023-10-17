@@ -22,7 +22,7 @@ class LocationsViewModel: ObservableObject {
     
     // Current camera position on map
     @Published var cameraPosition: MapCameraPosition = MapCameraPosition.region(MKCoordinateRegion())
-    private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
     // Show list of locations
     @Published private(set) var showLocationsList: Bool = false
