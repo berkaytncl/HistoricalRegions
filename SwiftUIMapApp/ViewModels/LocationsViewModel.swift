@@ -51,7 +51,15 @@ class LocationsViewModel: ObservableObject {
     }
     
     func changeMapLocation(location: Location) {
-        mapLocation = location
-        showLocationsList = false
+        withAnimation(.easeInOut) {
+            mapLocation = location
+            showLocationsList = false
+        }
+    }
+    
+    func nextButtonPressed() {
+        guard let currentIndex = locations.firstIndex(of: mapLocation) else { return }
+        let nextIndex = (currentIndex + 1) % locations.count
+        changeMapLocation(location: locations[nextIndex])
     }
 }
