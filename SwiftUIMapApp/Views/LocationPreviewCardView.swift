@@ -72,11 +72,13 @@ extension LocationPreviewCardView {
     }
     
     private var learnMoreButton: some View {
-        Button(action: {}, label: {
+        Button {
+            viewModel.sheetLocation = location
+        } label: {
             Text("Learn more")
                 .font(.headline)
                 .frame(width: 125, height: 35)
-        })
+        }
         .buttonStyle(.borderedProminent)
     }
     

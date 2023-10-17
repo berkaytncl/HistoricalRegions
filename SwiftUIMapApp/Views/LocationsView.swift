@@ -23,6 +23,9 @@ struct LocationsView: View {
                 locationPreviewCard
             }
         }
+        .sheet(item: $viewModel.sheetLocation) { location in
+            LocationDetailView(location: location)
+        }
     }
 }
 
